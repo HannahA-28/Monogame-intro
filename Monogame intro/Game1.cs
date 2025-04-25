@@ -9,7 +9,7 @@ namespace Monogame_intro
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        Texture2D dinoTexture;
+        Texture2D tigerTexture, elephantTexture, monkeyTexture, pigTexture, turtleTexture, cowTexture, natureTexture;
 
         public Game1()
         {
@@ -35,7 +35,13 @@ namespace Monogame_intro
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            dinoTexture = Content.Load<Texture2D>("dino1 png");
+            tigerTexture = Content.Load<Texture2D>("tiger");
+            elephantTexture = Content.Load<Texture2D>("elephant");
+            monkeyTexture = Content.Load<Texture2D>("monkey");
+            pigTexture = Content.Load<Texture2D>("pig");
+            turtleTexture = Content.Load<Texture2D>("turtle");
+            cowTexture = Content.Load<Texture2D>("cow");
+            natureTexture = Content.Load<Texture2D>("nature");
         }
 
         protected override void Update(GameTime gameTime)
@@ -55,7 +61,13 @@ namespace Monogame_intro
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(dinoTexture, new Vector2(25, 25), Color.White);
+            _spriteBatch.Draw(natureTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(tigerTexture, new Vector2(400, 300), Color.White);
+            _spriteBatch.Draw(elephantTexture, new Vector2(600, 150), Color.White);
+            _spriteBatch.Draw(monkeyTexture, new Vector2(175, 50), Color.White);
+            _spriteBatch.Draw(pigTexture, new Vector2(150, 500), Color.White);
+            _spriteBatch.Draw(turtleTexture, new Vector2(500, 500), Color.White);
+            _spriteBatch.Draw(cowTexture, new Vector2(125, 360), Color.White);
 
             _spriteBatch.End();
 
